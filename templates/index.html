@@ -1,0 +1,297 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="main-container">
+            <header class="header">
+              <div class="logo">💪🏻</div>
+              <h1 class="title">RINHA DO MALVÃO</h1>
+              <h2>Comps Disponíveis</h2>
+            </header>
+            <div class="divider">
+              <div class="container1">
+                <form method="post" action="/sorteio">
+                    <button type="submit">Realizar Sorteio</button>
+                </form>
+            </div>
+            {% if numero1 is defined and nomes_associados1 is defined %}
+             
+            <div class="container">
+                
+                    <div class="table-container equipe1">
+                        <button onclick="copiarNomes('equipe1')">Copiar Campeões Equipe 1</button>
+                        <h2>Equipe 1 {{ nome_associado1 }}</h2>
+                        <table>
+                            <tr>
+                                <th>{{ nome_associado1 }}</th>
+                            </tr>
+                            {% for nome in nomes_associados1 %}
+                                <tr>
+                                    <td><img src="{{ url_for('static', path='champion/' + nome + '.png') }}" style="width: 25px; height: auto;">{{ nome }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+                
+                {% if numero2 is defined and nomes_associados2 is defined %}
+                    <div class="table-container equipe2">
+                        <button onclick="copiarNomes('equipe2')">Copiar Campeões Equipe 2</button> 
+                        <h2>Equipe 2: {{ nome_associado2 }}</h2> 
+                        <table>
+                            <tr>
+                                <th>{{ nome_associado2 }}</th>
+                            </tr>
+                            {% for nome in nomes_associados2 %}
+                                <tr>
+                                    <td><img src="{{ url_for('static', path='champion/' + nome + '.png') }}" style="width: 25px; height: auto;">{{ nome }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    
+                
+          
+            </div>
+                
+                
+          
+            <script>
+                function copiarNomes(equipe) {
+                    var nomesEquipe = Array.from(document.querySelectorAll(`.${equipe} td`)).map(td => td.innerText).join(', ');
+            
+                    var mensagem = `Campeões da Equipe ${equipe}: ${nomesEquipe}`;
+            
+                    navigator.clipboard.writeText(nomesEquipe).then(function() {
+                        alert(`Campeões ${equipe} copiados para a área de transferência!`);
+                    }).catch(function(err) {
+                        console.error(`Erro ao copiar os Campeões da Equipe ${equipe}: `, err);
+                    });
+                }
+            </script>
+            {% endif %}
+            
+            <div class="rodape">
+                <p>Sorteador da Rinha do Malvão não é endossado pela Riot Games e não reflete as opiniões ou opiniões da Riot Games ou de qualquer pessoa oficialmente envolvida na produção ou gerenciamento de propriedades da Riot Games. Riot Games e todas as propriedades associadas são marcas comerciais ou marcas registradas da Riot Games, Inc</p>
+            
+            </div>
+            </div>
+            
+          </div>
+          
+          <style>
+            body {
+              background-color: #000000;
+              color: #fff;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              height: 100vh;
+              margin: 0;
+          }
+          
+          .container {
+              display: flex;
+              justify-content: space-between;
+              padding: 20px;
+          }
+          
+          .table-container {
+              flex-basis: 48%;
+              margin-bottom: 20px; /* Adiciona margem abaixo da tabela */
+              width: 100%; /* Garante que a tabela ocupe 100% da largura da .table-container */
+          }
+          .equipe1 {
+              margin-right: 30px; /* ou ajuste o valor conforme necessário */
+          }
+          
+          
+          table {
+              border-collapse: collapse;
+              width: 100%;
+              margin-bottom: 20px;
+              color: #fff;
+          }
+          
+          th, td {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+          }
+          
+          th {
+              background-color: #f2f2f2;
+              color: #333;
+          }
+          
+          td {
+              border-color: #555;
+          }
+          
+          .container1 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              margin-top: 20px;
+          }
+          
+          h2 {
+              white-space: nowrap;
+              margin-right: 2px;
+              margin-bottom: 10px;
+          }
+          
+          .container1 button {
+              padding: 10px;
+              background-color: #ff00ff;
+              color: #fff;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              margin-top: 5px;
+          }
+          
+          .container1 button:hover {
+              background-color: #ff00ffa4;
+          }
+          
+          button:hover {
+              background-color: rgb(80, 207, 216);
+          }
+          
+          button {
+              padding: flex;
+              background-color: rgb(76, 172, 175);
+              color: #fff;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              margin-top: 5px;
+          }
+          
+          .rodape {
+              padding: 20px;
+              text-align: center;
+              bottom: 0;
+              height: 12px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+          
+          .rodape p {
+              font-size: 14px;
+              margin: 0;
+          }
+          
+          .titlere {
+              font-size: 25px;
+          }
+          .control-icon {
+              fill: #b80c12;
+              transition: .3s ease;
+              pointer-events: none;
+          }
+          
+          .control-icon-close {
+              display: none;
+          }
+          
+          
+          
+          .ultimos-sorteios {
+              list-style-type: none;
+              padding: 0;
+              display: flex;  /* Usa flexbox para alinhar os itens lado a lado */
+              flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+              align-items: center;
+          }
+          .sorteio-item {
+              margin: 10px;  /* Adiciona espaço entre os itens */
+              border: 1px solid #ccc;  /* Adiciona uma borda para separar visualmente os itens */
+              padding: 10px;  /* Adiciona algum espaço interno aos itens */
+              align-items: center;
+          }
+          
+          
+            .main-container {
+              display: flex;
+              flex-direction: column;
+              padding-bottom: 50px;
+              overflow: auto;
+              position: relative;
+            }
+          
+            .image {
+              position: absolute;
+              inset: 0;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          
+            .header {
+              position: relative;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+              background-color: #0f122c;
+              display: flex;
+              justify-content: space-between;
+              gap: 8px;
+              padding: 8px 79px 18px;
+            }
+          
+            @media (max-width: 991px) {
+              .header {
+                max-width: 100%;
+                flex-wrap: wrap;
+                padding: 0 20px;
+              }
+            }
+          
+            .logo {
+              color: #000;
+              white-space: nowrap;
+              font: 700 64px Jost, sans-serif;
+            }
+          
+            @media (max-width: 991px) {
+              .logo {
+                font-size: 40px;
+                white-space: initial;
+              }
+            }
+          
+            .title {
+              background: linear-gradient(180deg, #fff 54.17%, rgba(255, 255, 255, 0) 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              align-self: end;
+              margin-top: 32px;
+              white-space: nowrap;
+              font: 700 32px Jost, sans-serif;
+            }
+          
+            @media (max-width: 991px) {
+              .title {
+                white-space: initial;
+              }
+            }
+          
+            .divider {
+              position: relative;
+              background-color: #0f122c;
+              align-self: center;
+              display: flex;
+              height: auto;
+              flex-direction: column;
+              margin: 132px 200px 80px;
+            }
+          
+        
+          </style>
+    </body>
+</html>
