@@ -1,171 +1,212 @@
+
 body {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    margin: 0;
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .table-container {
-    flex-basis: 48%;
-    margin-bottom: 20px; /* Adiciona margem abaixo da tabela */
-    width: 100%; /* Garante que a tabela ocupe 100% da largura da .table-container */
+  flex-basis: 48%;
+  margin-bottom: 20px; /* Adiciona margem abaixo da tabela */
+  width: 100%; /* Garante que a tabela ocupe 100% da largura da .table-container */
 }
 .equipe1 {
-    margin-right: 30px; /* ou ajuste o valor conforme necessário */
+  margin-right: 30px; /* ou ajuste o valor conforme necessário */
 }
 
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 th, td {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 th {
-    background-color: #f2f2f2;
-    color: #333;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
 td {
-    border-color: #555;
+  border-color: #555;
 }
 
 .container1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 h2 {
-    white-space: nowrap;
-    margin-right: 2px;
-    margin-bottom: 10px;
+  white-space: nowrap;
+  margin-right: 2px;
+  margin-bottom: 10px;
 }
 
 .container1 button {
-    padding: 10px;
-    background-color: #ff00ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 5px;
+  padding: 10px;
+  background-color: #ff00ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
 .container1 button:hover {
-    background-color: #ff00ffa4;
+  background-color: #ff00ffa4;
 }
 
 button:hover {
-    background-color: rgb(80, 207, 216);
+  background-color: rgb(80, 207, 216);
 }
 
 button {
-    padding: flex;
-    background-color: rgb(76, 172, 175);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 5px;
+  padding: flex;
+  background-color: rgb(76, 172, 175);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
 .rodape {
-    padding: 20px;
-    text-align: center;
-    bottom: 0;
-    height: 12px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  height: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rodape p {
-    font-size: 14px;
-    margin: 0;
+  font-size: 14px;
+  margin: 0;
 }
 
 .titlere {
-    font-size: 25px;
+  font-size: 25px;
 }
-
-details {
-    width: auto;
-    height: auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    border-radius: auto;
-    background-color: #333;
-    text-align: left;
-    font-weight: bold;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 20px;
-    transition: all .3s;
-}
-
-summary {
-    display: flex;
-    justify-content: center;
-}
-
-details[open] {
-    background-color: #020202;
-    box-shadow: 0 0 0 4px #a09f9f;
-    text-align: center;
-}
-
-details[open] .control-icon-close {
-    display: initial;
-    transition: .3s ease;
-}
-
-details[open] .control-icon-expand {
-    display: none;
-}
-
 .control-icon {
-    fill: #b80c12;
-    transition: .3s ease;
-    pointer-events: none;
+  fill: #b80c12;
+  transition: .3s ease;
+  pointer-events: none;
 }
 
 .control-icon-close {
-    display: none;
+  display: none;
 }
 
 
 
 .ultimos-sorteios {
-    list-style-type: none;
-    padding: 0;
-    display: flex;  /* Usa flexbox para alinhar os itens lado a lado */
-    flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
-    align-items: center;
+  list-style-type: none;
+  padding: 0;
+  display: flex;  /* Usa flexbox para alinhar os itens lado a lado */
+  flex-wrap: wrap;  /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+  align-items: center;
 }
 .sorteio-item {
-    margin: 10px;  /* Adiciona espaço entre os itens */
-    border: 1px solid #ccc;  /* Adiciona uma borda para separar visualmente os itens */
-    padding: 10px;  /* Adiciona algum espaço interno aos itens */
-    align-items: center;
+  margin: 10px;  /* Adiciona espaço entre os itens */
+  border: 1px solid #ccc;  /* Adiciona uma borda para separar visualmente os itens */
+  padding: 10px;  /* Adiciona algum espaço interno aos itens */
+  align-items: center;
 }
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  overflow: auto;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #0f122c;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 79px 18px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+}
+
+.logo {
+  color: #000;
+  white-space: nowrap;
+  font: 700 64px Jost, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .logo {
+    font-size: 40px;
+    white-space: initial;
+  }
+}
+
+.title {
+  background: linear-gradient(180deg, #fff 54.17%, rgba(255, 255, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: end;
+  margin-top: 32px;
+  white-space: nowrap;
+  font: 700 32px Jost, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .title {
+    white-space: initial;
+  }
+}
+
+.divider {
+  position: relative;
+  background-color: #0f122c;
+  align-self: center;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin: 132px 200px 80px;
+}
+

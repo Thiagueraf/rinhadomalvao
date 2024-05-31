@@ -6,7 +6,7 @@ from sqlalchemy import create_engine, Column, Integer, String, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from random import randint, sample
-from static.listas_de_nomes import listas_de_nomes, nomes_por_numero
+from static.listas_de_nomes import listas_de_nomes, nomes_por_numero,nomes_por_numero_lab,nomes_por_numero_lab,listas_de_nomes_lab
 from typing import List
 
 
@@ -82,12 +82,30 @@ def sortear_numeros(db: Session = Depends(get_db)):
 
     
     return equipe1, equipe2, lista_associada1, lista_associada2
+def sortear_numeros_lab():
+    equipe1 = randint(1,4)
+    equipe2= randint(1,4)
+
     
+    #Garantir que os números não sejam iguais
+    while equipe2 == equipe1:
+          equipe2 = randint(1,4)
+
+    lista_associada1 = listas_de_nomes_lab[equipe1]() if equipe1 == 52 else listas_de_nomes_lab.get(equipe1, [])
+    lista_associada2 = listas_de_nomes_lab[equipe2]() if equipe2 == 52 else listas_de_nomes_lab.get(equipe2, [])
+
+   
+
+    
+    return equipe1, equipe2, lista_associada1, lista_associada2
     
 @app.get("/", response_class=HTMLResponse)
 async def get_index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+@app.get("/laboratorio", response_class=HTMLResponse)
+async def get_index(request: Request):
+    return templates.TemplateResponse("lab.html", {"request": request})
 
 
 @app.post("/sorteio",response_class=HTMLResponse)
@@ -97,6 +115,22 @@ async def sorteio(request: Request, db: Session = Depends(get_db)):
      nome_associado2 = nomes_por_numero.get(equipe2, "Nome Padrão 2")
 
      return templates.TemplateResponse("index.html", {
+         "request": request,
+         "numero1": equipe1,
+         "nomes_associados1": lista_associada1,
+         "numero2": equipe2,
+         "nomes_associados2": lista_associada2,
+         "nome_associado1": nome_associado1,
+         "nome_associado2": nome_associado2,
+         })
+     
+@app.post("/sorteiolaboratorio",response_class=HTMLResponse)
+async def sorteio(request: Request, db: Session = Depends(get_db)):
+     equipe1, equipe2, lista_associada1, lista_associada2 = sortear_numeros_lab()
+     nome_associado1 = nomes_por_numero_lab.get(equipe1, "Nome Padrão 1")
+     nome_associado2 = nomes_por_numero_lab.get(equipe2, "Nome Padrão 2")
+
+     return templates.TemplateResponse("lab.html", {
          "request": request,
          "numero1": equipe1,
          "nomes_associados1": lista_associada1,
