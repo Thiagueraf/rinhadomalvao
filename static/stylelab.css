@@ -1,6 +1,6 @@
 
 body {
-  background-color: #000000;
+  background-color: #000800;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -64,8 +64,8 @@ h2 {
 
 .container1 button {
   padding: 10px;
-  background-color: #ff00ff;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -73,7 +73,7 @@ h2 {
 }
 
 .container1 button:hover {
-  background-color: #ff00ffa4;
+  background-color: #949394a4;
 }
 
 button:hover {
@@ -155,7 +155,7 @@ button {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  background-color: #0f122c;
+  background-color: #000800;
   display: flex;
   justify-content: space-between;
   gap: 8px;
@@ -202,12 +202,13 @@ button {
 
 .divider {
   position: relative;
-  background-color: #0f122c;
+  background-color: #001300;
   align-self: center;
   display: flex;
   height: auto;
   flex-direction: column;
   margin: 132px 200px 80px;
+  border: 2px solid white ;
 }
 
 
@@ -221,7 +222,7 @@ button {
 .centralizado a {
   color: white;
   text-decoration: none;
-  background-color: green;
+  background-color: rgb(47, 2, 61);
   border: 2px solid white;
   justify-content: center;
   align-items: center;
@@ -231,5 +232,5 @@ button {
 }
 
 .centralizado a:hover {
-  background-color: darkgreen;
+  background-color: rgb(68, 0, 100);
 }

@@ -139,14 +139,17 @@ nomes_por_numero = {
 nomes_por_numero_lab = {
 1: "Personagens que eu amasso de Poppy",
 2: "Os personagens favoritos do Thiaguera",
-3: "teste",
-4:"teste"
+3: "Aqui é bodybuilder",
+4:"Personagens que tem problema de cabeça",
+5:"Um Mix do mundo (Um campeão aleatório de cada região)",
+6:"Campeões que eu chamaria pra um churrasco"
 }
 
 listas_de_nomes_lab = {
     1: ["Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe", "AurelionSol", "Azir", "Bardo", "Belveth", "Blitzcrank", "Brand", "Braum", "Briar", "Caitlyn", "Camille", "Cassiopeia", "Chogath", "Corki", "Darius", "Diana", "DrMundo", "Draven", "Ekko", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", "JarvanIV", "Jax", "Jayce", "Jhin", "Jinx", "KSante", "Kaisa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina", "Kayle", "Kayn", "Kennen", "Khazix", "Kindred", "Kled", "KogMaw", "Leblanc", "LeeSin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "MasterYi", "Milio", "MissFortune", "Mordekaiser", "Morgana", "Naafiri", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nilah", "Nocturne", "Nunu", "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "RekSai", "Rell", "Renata", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Sylas", "Syndra", "TahmKench", "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle", "Tryndamere", "TwistedFate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Velkoz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath", "XinZhao", "Yasuo", "Yone", "Yorick", "Yuumi", "Zac", "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra"],
     2:["Poppy","Ornn","Warwick","Vi","Shen","Kayn","Karma","Ezreal","Braum","Ekko"],
-    3:["Corki","Lulu","Rumble","Teemo","Tristana","Veigar","Yuumi"],
-    4:["Corki","Lulu","Rumble","Teemo","Tristana","Veigar","Yuumi"],
-    
+    3:["Aatrox","Alistar","Braum","DrMundo","Gangplank","Darius","Garen","Illaoi","Ksante","LeeSin","Olaf","Pantheon","Ornn","Sett","Sion","Taric","Tryndamere","Udyr","Zac"],
+    4:["Aatrox","Amumu","Annie","Teemo","Aphelios","Draven","Hwei","Jinx","Kayn","Kled","Lulu","Poppy","Rumble","Shaco","Sylas","Veigar","Vex","Ziggs","Zoe"],
+    5:["Gangplank","Tristana","Lux","Braum","Elise","Irelia","Neeko","Darius","Kaisa","Urgot","AurelionSol","Azir","Vi"],
+    6:["Brand","Braum","Corki","Ekko","Fizz","Gangplank","Kled","Gnar","Gragas","Irelia","Jinx","Karma","Kennen","Kled","MasterYi","Nunu","Ornn","Poppy","Rammus","Rumble","Shen","Taliyah","Teemo","Vi",]
 }

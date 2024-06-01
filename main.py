@@ -89,7 +89,7 @@ def sortear_numeros_lab():
     
     #Garantir que os números não sejam iguais
     while equipe2 == equipe1:
-          equipe2 = randint(1,4)
+          equipe2 = randint(1,5)
 
     lista_associada1 = listas_de_nomes_lab[equipe1]() if equipe1 == 52 else listas_de_nomes_lab.get(equipe1, [])
     lista_associada2 = listas_de_nomes_lab[equipe2]() if equipe2 == 52 else listas_de_nomes_lab.get(equipe2, [])

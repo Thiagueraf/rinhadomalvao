@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="static/style.css" />
+        <link rel="stylesheet" href="static/stylelab.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,10 +9,12 @@
     <body>
         <div class="main-container">
             <header class="header">
-              <div class="logo">💪🏻</div>
+              <div class="logo">🔬</div>
               <h1 class="title">Laboratório do Thiaguera</h1>
             </header>
-            <a href="/">Rinha do Malvão originial</a>
+            <div class="centralizado">
+                <a href="/">Rinha do Malvão Original</a>
+            </div>
             <div class="divider">
               <div class="container1">
                 <form method="post" action="/sorteiolaboratorio">
@@ -25,7 +27,7 @@
                 
                     <div class="table-container equipe1">
                         <button onclick="copiarNomes('equipe1')">Copiar Campeões Equipe 1</button>
-                        <h2>Equipe 1 {{ nome_associado1 }}</h2>
+                        <h2>Equipe 1: {{ nome_associado1 }}</h2>
                         <table>
                             <tr>
                                 <th>{{ nome_associado1 }}</th>

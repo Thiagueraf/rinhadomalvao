@@ -12,7 +12,9 @@
               <div class="logo">💪🏻</div>
               <h1 class="title">RINHA DO MALVÃO</h1>
             </header>
-            <a href="/laboratorio">Laboratório do Thiaguera</a>
+            <div class="centralizado">
+                <a href="/laboratorio">Laboratório do Thiaguera</a>
+            </div>
             <div class="divider">
               <div class="container1">
                 <form method="post" action="/sorteio">
@@ -25,7 +27,7 @@
                 
                     <div class="table-container equipe1">
                         <button onclick="copiarNomes('equipe1')">Copiar Campeões Equipe 1</button>
-                        <h2>Equipe 1 {{ nome_associado1 }}</h2>
+                        <h2>Equipe 1: {{ nome_associado1 }}</h2>
                         <table>
                             <tr>
                                 <th>{{ nome_associado1 }}</th>
