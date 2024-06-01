@@ -83,13 +83,13 @@ def sortear_numeros(db: Session = Depends(get_db)):
     
     return equipe1, equipe2, lista_associada1, lista_associada2
 def sortear_numeros_lab():
-    equipe1 = randint(1,4)
-    equipe2= randint(1,4)
+    equipe1 = randint(1,6)
+    equipe2= randint(1,6)
 
     
     #Garantir que os números não sejam iguais
     while equipe2 == equipe1:
-          equipe2 = randint(1,5)
+          equipe2 = randint(1,6)
 
     lista_associada1 = listas_de_nomes_lab[equipe1]() if equipe1 == 52 else listas_de_nomes_lab.get(equipe1, [])
     lista_associada2 = listas_de_nomes_lab[equipe2]() if equipe2 == 52 else listas_de_nomes_lab.get(equipe2, [])
